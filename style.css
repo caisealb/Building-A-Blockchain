@@ -106,6 +106,8 @@ canvas {
 }
 
 #genesis_sketch #creation_sketch  {
+   display: inline-block;
+  margin: 0 auto;
   animation: fadeIn linear 1s;
   -webkit-animation: fadeIn linear 1s;
   -moz-animation: fadeIn linear 1s;
