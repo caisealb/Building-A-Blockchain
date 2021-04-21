@@ -1,0 +1,155 @@
+/* Body and canvas */
+html, body {
+  /* cursor: crosshair; */
+  margin: 0;
+  background-color: #262626;
+  font-style: normal;
+  font-family: "Lucida Console", monospace;
+}
+canvas {
+  display: block;
+}
+
+/* Text elements */
+.title {
+  background: #262626;
+  font-size: 40px;
+  font-family: "Archivo Black", sans-serif;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  color: white;
+  text-align: center;
+  letter-spacing: -2.5px;
+}
+
+
+.subtitle {
+  font-size: 24px;
+  font-family: "Archivo Black", sans-serif;
+  color: white;
+  text-align: center;
+  letter-spacing: -2.5px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.explanation {
+  width: 50%;
+  margin-left: 25%;
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: white;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+.explanationEnd {
+  margin-bottom: 75px;
+}
+
+.body_bold {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+}
+
+.fade-in-text {
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* Containers */
+.sketch_container {
+  width: 100%;
+  overflow: auto;
+  text-align: center;
+  height: auto;
+}
+
+
+/* ID-specific */
+#stickyHeader {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#genesis_sketch #creation_sketch  {
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
+  overflow: auto;
+}
+
+#afterSketch1 {
+  margin-top: 50px;
+}
+
+
+#chain_sketch {
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
+  overflow: auto;
+}
+
+#checker_sketch {
+  display: inline-block;
+  margin: 0 auto;
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
+  overflow: auto;
+}
+
+#build_sketch {
+  display: inline-block;
+  margin: 0 auto;
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
+  overflow: auto;
+}

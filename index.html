@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+    <script src="lib/p5.sound.min.js"></script>
+    <script src="lib/sha256.js"></script>
+    <script src="static/sketch1.js"></script>
+    <script src="static/sketch2.js"></script>
+    <script src="static/sketch3.js"></script>
+    <script src="static/sketch4.js"></script>
+    <script src="static/sketch5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <div class="title fade-in-text" id="stickyHeader">BUILDING A BL<span style='font-size:50px;'>&#9744;</span>CKCHAIN</div>
+    <div class="subtitle fade-in-text">WHAT IS A BLOCKCHAIN?</div>
+    <div class="explanation fade-in-text"><p>Blockchain technology is a way of recording and managing <span class="body_bold">transaction data</span>, most commonly used in cryptocurrencies like Bitcoin.</p><p>A blockchain is made up of units called <span class="body_bold">'blocks'</span>.</p><p>Each block is a package of information that contains three key pieces: <span class="body_bold", style="color:DodgerBlue">data</span>, a <span class="body_bold", style="color:Gold">hash</span>, and the <span class="body_bold", style="color:Tomato">previous block's hash</span>. A hash is a unique combination of letters and numbers — like a digital fingerprint.</p></div>
+    <div class="sketch_container"><div id="genesis_sketch"></div></div>
+    <div class="explanation explanationEnd fade-in-text" id="afterSketch1"><p>The first block of a blockchain is called the <span class="body_bold">genesis block</span>. Because there are no previous blocks, the value of the previous block's hash is 0.<p></div>
+    <div class="subtitle fade-in-text">CREATING BLOCKS</div>
+    <div class="explanation fade-in-text"><p>When a new block is created, the data it contains determines its hash. Try adding pieces of <span class="body_bold", style="color:DodgerBlue">data</span> to the block below and see how its <span class="body_bold", style="color:Gold">hash</span> changes.</p></div>
+    <div class="sketch_container"><div id="creation_sketch"></div></div>
+    <div class="subtitle fade-in-text">MAKING A CHAIN</div>
+    <div class="explanation fade-in-text"><p>So, each new block is connected to the block before it by that <span class="body_bold", style="color:Tomato">previous block's hash</span>. But what happens when you <span class="body_bold">edit the data</span> of one of the blocks in the chain?</p></div>
+    <div class="sketch_container"><div id="chain_sketch"></div></div>
+    <div class="explanation fade-in-text"><p>If you edit the data in a block, its hash also changes, making the next block invalid. This is because the next block has an <span class="body_bold">outdated value</span> for the <span class="body_bold", style="color:Tomato">previous block's hash</span> that was edited.</p></div>
+    <div class="explanation explanationEnd fade-in-text"><p>This mechanism helps to make blockchain resistant to tampering or hacking. But the real power of blockchain is shown when we <span class="body_bold">share a chain with others</span>.<p></div>
+    <div class="subtitle fade-in-text">A NETWORK OF NODES</div>
+    <div class="explanation fade-in-text"><p>Blockchain is often compared to a <span class="body_bold">ledger</span>: a chronological record of transactions. Like a ledger, every time data is added (e.g. through a transaction), a new block — or entry — is added to the chain. </p><p>But, unlike a ledger, blockchain isn't kept in one place. It's decentralised, spread over many computers in a <span class="body_bold">network</span>. Each computer is called a <span class="body_bold">node</span>. All nodes have access to the chain — but equally, they must <span class="body_bold">agree to changes</span> in the chain.</p><p>To add a block, your computer must solve a crytographic puzzle, known as <span class="body_bold">mining</span>. When it finds a solution, it must <span class="body_bold">share</span> it with the chain's network. The network then decides if the solution is valid, and if the new block can be <span class="body_bold", style="color:ForestGreen">trusted</span>.</p></div>
+    <div class="sketch_container"><div id="checker_sketch"></div></div>
+    <div class="explanation explanationEnd fade-in-text"><p>This is called <span class="body_bold">proof of work</span>. If a majority approves the change, the new block is added to the end of the chain.</p></div>
+    <div class="subtitle fade-in-text">BUILDING WITH DATA</div>
+    <div class="explanation fade-in-text"><p>With blockchain, transactions are <span class="body_bold">peer-to-peer</span>, <span class="body_bold">visible to all</span>, and <span class="body_bold">secure</span>. But do transactions have to be financial, as in cryptocurrencies? Perhaps a blockchain could contain something different.</p><p>Press the key of a letter from <span class="body_bold">A to G</span> to add a block.</p><p>Press <span class="body_bold">enter</span> to play the chain!</p></div>
+    <div class="sketch_container"><div id="build_sketch"></div></div>
+    <div class="explanation explanationEnd fade-in-text"><p>As each user in the network adds to the chain, a collaborative song is made.</p><p>In this way, blockchains can have many creative uses outside the world of crytocurrency — games, storytelling, and more.</p></div>
+
+
+
+
+  </body>
+</html>
