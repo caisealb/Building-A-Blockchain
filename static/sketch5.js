@@ -1,5 +1,7 @@
 //_______BLOCKCHAIN CONSTRUCTION_____________________________________
 //Uses js-SHA256 library by Yi-Cyuan Chen (lib/sha256.js)
+
+//Variables to communicate with p5 instance
 var nBlocks = 1;
 var d = new Date();
 var currentHash;
@@ -9,6 +11,7 @@ var noteIndex;
 var autoplay = false;
 var songIndex = 0;
 
+//Block creation class
 class Block{
   constructor(index, timestamp, data, previousHash = ''){
     this.index = index;
@@ -33,6 +36,7 @@ class Block{
   }
 }
 
+//Blockchain creation class
 class Blockchain {
   constructor() {
     this.chain = [this.createGenesisBlock()];
@@ -75,9 +79,12 @@ class Blockchain {
 
 }
 
+
+//Create new blockchain with genesis block
 var chainTest = new Blockchain;
 console.log("New blockchain started: genesis block generated!");
 
+//Add new block to instance of chain with key data
 function addToChain(keyCode) {
   if ((keyCode < 104) && (keyCode > 96)){
     nBlocks++;
@@ -97,6 +104,7 @@ function addToChain(keyCode) {
   }
 }
 
+//Trigger chain song if enter key is pressed
 function triggerSong(keyCode) {
   if (keyCode === 13){
     autoplay = true;
@@ -105,6 +113,7 @@ function triggerSong(keyCode) {
   }
 }
 
+//If keypress is detected and there's less than 8 blocks in the chain, add another
 document.addEventListener("keypress", (event) => {
   var keyCode = event.keyCode;
     if (nBlocks <8){
@@ -192,14 +201,13 @@ var buildChain = function(p) {
   };
 
   //Function for playing a musical note
-  // A function to play a note
   p.playNote = function(note, duration) {
     p.userStartAudio();
     osc.freq(p.midiToFreq(note));
     // Fade it in
     osc.fade(0.5,0.2);
 
-    // If we sest a duration, fade it out
+    // If duration is set, fade it out
     if (duration) {
       setTimeout(function() {
         osc.fade(0,0.5);
@@ -213,3 +221,4 @@ var buildChain = function(p) {
 
 //_______________INSTANTIATE SKETCH______________
 var sketch5 = new p5(buildChain, 'build_sketch');
+
